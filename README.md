@@ -4,7 +4,7 @@
 
 ## Steps did in this project :
 
-### Installed things :
+### Installed things in the project:
 
 npm init
 
