@@ -82,10 +82,11 @@ function UserRoutes(app) {
   
   app.post("/api/users/signin", signin);
   app.post("/api/users/signout", signout);
-  app.post("/api/users/account", account);
+  // app.post("/api/users/account", account);
 
   app.post("/users/login", login);
   app.get("/users/all", findAllUsers);
   app.post("/users/signup", signup);
+  app.get("/users/fetchAccount", account);
 }
 export default UserRoutes;
