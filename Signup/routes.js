@@ -1,8 +1,6 @@
-import React from 'react'
-
 function SignupRoutes(app) {
-  return (
-    <div>routes</div>
-  )
+  app.post("/signup", (req, res) => {
+    // Signup logic here
+});
 }
 export default SignupRoutes;

@@ -22,6 +22,11 @@ npm  install  dotenv
 
 npm install mongoose
 
+npm  install  express-session
+
+npm install uuid
+
+
 
 ## Project Struture is :
 
