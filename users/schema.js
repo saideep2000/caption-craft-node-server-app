@@ -17,11 +17,9 @@ const userSchema = new mongoose.Schema({
         type : Date,
         default : "01/01/2000"
     },
-    role: {
-      type: String,
-      enum: ["ADMIN", "USER"],
-      default: "USER" 
-    },
+    followers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
+    following: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
+    posts : [{ type: mongoose.Schema.Types.ObjectId, ref: 'Picture' }],
   },
   { collection: "users" });
 export default userSchema;

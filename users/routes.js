@@ -74,7 +74,7 @@ function UserRoutes(app) {
 
 
 
-  app.post("/api/users", createUser);
+  // app.post("/api/users", createUser);
   // app.get("/api/users", findAllUsers);
   app.get("/api/users/:userId", findUserById);
   app.put("/api/users/:userId", updateUser);
@@ -88,5 +88,10 @@ function UserRoutes(app) {
   app.get("/users/all", findAllUsers);
   app.post("/users/signup", signup);
   app.get("/users/fetchAccount", account);
+
+  // Credentials:
+  // user101
+  // hashed_password1
+
 }
 export default UserRoutes;

@@ -1,0 +1,58 @@
+[
+    {
+        "_id": "62100a1e1b23ab123456a1a1",
+        "username": "user101",
+        "password": "hashed_password1",
+        "firstname": "Alex",
+        "lastname": "Brown",
+        "email": "alex.brown@example.com",
+        "dob": "1985-01-10",
+        "profilePicture": "url_to_alex_image",
+        "followers": ["62100a1e1b23ab123456a1a2", "62100a1e1b23ab123456a1a3"],
+        "following": ["62100a1e1b23ab123456a1a4", "62100a1e1b23ab123456a1a2"],
+        "PostedPictures": ["62100b2e1b23ab123456b1b1", "62100b2e1b23ab123456b1b2"]
+    },
+
+    {
+        "_id": "62100a1e1b23ab123456a1a2",
+        "username": "user102",
+        "password": "hashed_password2",
+        "firstname": "Beth",
+        "lastname": "Johnson",
+        "email": "beth.johnson@example.com",
+        "dob": "1990-04-20",
+        "profilePicture": "url_to_beth_image",
+        "followers": ["62100a1e1b23ab123456a1a1", "62100a1e1b23ab123456a1a3"],
+        "following": ["62100a1e1b23ab123456a1a1", "62100a1e1b23ab123456a1a4"],
+        "PostedPictures": ["62100b2e1b23ab123456b1b3", "62100b2e1b23ab123456b1b4"]
+    },
+
+    {
+        "_id": "62100a1e1b23ab123456a1a3",
+        "username": "user103",
+        "password": "hashed_password3",
+        "firstname": "Charlie",
+        "lastname": "Davis",
+        "email": "charlie.davis@example.com",
+        "dob": "1988-07-15",
+        "profilePicture": "url_to_charlie_image",
+        "followers": ["62100a1e1b23ab123456a1a1", "62100a1e1b23ab123456a1a2"],
+        "following": ["62100a1e1b23ab123456a1a4", "62100a1e1b23ab123456a1a1"],
+        "PostedPictures": ["62100b2e1b23ab123456b1b5", "62100b2e1b23ab123456b1b6"]
+    },
+
+    {
+        "_id": "62100a1e1b23ab123456a1a4",
+        "username": "user104",
+        "password": "hashed_password4",
+        "firstname": "Diana",
+        "lastname": "Evans",
+        "email": "diana.evans@example.com",
+        "dob": "1992-11-30",
+        "profilePicture": "url_to_diana_image",
+        "followers": ["62100a1e1b23ab123456a1a3", "62100a1e1b23ab123456a1a2"],
+        "following": ["62100a1e1b23ab123456a1a1", "62100a1e1b23ab123456a1a3"],
+        "PostedPictures": ["62100b2e1b23ab123456b1b7", "62100b2e1b23ab123456b1b8"]
+    }
+    
+]
