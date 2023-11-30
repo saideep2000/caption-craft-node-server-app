@@ -15,7 +15,7 @@ function PictureRoutes(app) {
   };
 
   
-  app.post("/pictures/UserFeed", fetchFeed);
+  app.get("/pictures/UserFeed", fetchFeed);
   app.get("/pictures/all", fetchAll);
 }
 export default PictureRoutes;
