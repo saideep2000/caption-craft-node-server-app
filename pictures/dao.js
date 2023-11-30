@@ -20,14 +20,15 @@ export const findFeedForUser = async (userId) => {
         // Extract the IDs of users that this user is following
         const followingUserIds = user.following;
 
+        // Exclude the user's own ID from the list to avoid fetching their own pictures
+        const filteredFollowingUserIds = followingUserIds.filter(id => id.toString() !== userId);
+
         // Find all pictures posted by users that this user is following
         let feedPictures = await model.find(
             {
-                postedBy : followingUserIds
+                postedBy: filteredFollowingUserIds
             }
         ).lean();
-
-
 
         // Deduplicate pictures
         feedPictures = Array.from(new Set(feedPictures.map(p => p._id.toString())))
@@ -36,7 +37,6 @@ export const findFeedForUser = async (userId) => {
         // Enrich each picture with profilePicture and name of the poster
         for (let picture of feedPictures) {
             const poster = await userModel.findById(picture.postedBy).lean();
-            console.log(poster)
             if (poster) {
                 picture.posterProfilePicture = poster.profilePicture; // assuming 'profilePicture' field exists in user schema
                 picture.posterName = poster.firstname + " " + poster.lastname; // Corrected the space between first and last name
@@ -48,7 +48,7 @@ export const findFeedForUser = async (userId) => {
         console.error("Error in findFeedForUser:", error);
         throw error; // or handle the error as needed
     }
-}
+};
 
 export const findAllPictures = async () => {
     // model.find();
@@ -88,3 +88,7 @@ export const findUserById = (pictureId) => model.findById(pictureId);
 //   model.updateOne({ _id: userId }, { $set: user });
   
 export const deletePicture = (pictureId) => model.deleteOne({ _id: pictureId });
+
+export const likePost = (userId, pictureId) => {
+    model.updateOne({ _id: pictureId }, { $set: user });
+}
