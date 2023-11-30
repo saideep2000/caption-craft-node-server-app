@@ -4,10 +4,10 @@ const userSchema = new mongoose.Schema({
     username: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     firstName: {
-        type : String,
+        type : String, default : "your firstname"
     },
-    lastName: {
-        type : String,
+    firstName: {
+        type : String, default : "your lastname"
     },
     email: {
         type : String,
@@ -17,9 +17,10 @@ const userSchema = new mongoose.Schema({
         type : Date,
         default : "01/01/2000"
     },
-    followers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
-    following: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
-    posts : [{ type: mongoose.Schema.Types.ObjectId, ref: 'Picture' }],
+    profilePicture : {type : String, default : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"},
+    followers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' , default : []}],
+    following: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' , default : []}],
+    posts : [{ type: mongoose.Schema.Types.ObjectId, ref: 'Picture' , default : []}],
   },
   { collection: "users" });
 export default userSchema;

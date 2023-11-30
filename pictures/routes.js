@@ -4,8 +4,8 @@ let currentUser = null;
 function PictureRoutes(app) {
 
   const fetchFeed = async (req, res) => {
-    const userId = req.body;
-    const feed = await dao.findFeedForUser(userId);
+    const body = req.body;
+    const feed = await dao.findFeedForUser(body["userId"]);
     res.json(feed);
   };
 
