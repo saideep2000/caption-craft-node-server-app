@@ -39,7 +39,7 @@ export const findFeedForUser = async (userId) => {
             console.log(poster)
             if (poster) {
                 picture.posterProfilePicture = poster.profilePicture; // assuming 'profilePicture' field exists in user schema
-                picture.posterName = poster.firstName + " " + poster.lastName; // Corrected the space between first and last name
+                picture.posterName = poster.firstname + " " + poster.lastname; // Corrected the space between first and last name
             }
         }
 
