@@ -61,7 +61,7 @@ export const findAllPictures = async () => {
             const poster = await userModel.findById(picture.postedBy).lean();
             if (poster) {
                 picture.profilePicture = poster.profilePicture; // assuming 'profilePicture' field exists in user schema
-                picture.username = `${poster.firstName} ${poster.lastName}`;
+                picture.username = poster.firstName + " " + poster.lastName;;
             }
         }
 
