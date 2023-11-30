@@ -36,6 +36,7 @@ export const findFeedForUser = async (userId) => {
         // Enrich each picture with profilePicture and name of the poster
         for (let picture of feedPictures) {
             const poster = await userModel.findById(picture.postedBy).lean();
+            console.log(poster)
             if (poster) {
                 picture.posterProfilePicture = poster.profilePicture; // assuming 'profilePicture' field exists in user schema
                 picture.posterName = poster.firstName + " " + poster.lastName; // Corrected the space between first and last name
@@ -55,13 +56,16 @@ export const findAllPictures = async () => {
         // Find all pictures
         let allPictures = await model.find({}).lean();
 
+        
         // Enrich each picture with profilePicture and name of the poster
         for (let picture of allPictures) {
             // console.log(picture.postedBy)
+            
             const poster = await userModel.findById(picture.postedBy).lean();
+            console.log(poster)
             if (poster) {
                 picture.profilePicture = poster.profilePicture; // assuming 'profilePicture' field exists in user schema
-                picture.username = poster.firstName + " " + poster.lastName;;
+                picture.username = poster.firstname + " " + poster.lastname;
             }
         }
 
