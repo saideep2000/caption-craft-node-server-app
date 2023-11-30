@@ -33,10 +33,6 @@ function UserRoutes(app) {
     req.session['currentUser'] = currentUser
     res.json(currentUser);
   };
-  const signout = (req, res) => {
-    req.session.destroy();
-    res.json(200);
-  };
 
   const account = async (req, res) => {
     res.json(req.session['currentUser']);
@@ -71,6 +67,11 @@ function UserRoutes(app) {
     
   };
 
+  const signout = (req, res) => {
+    req.session.destroy();
+    res.json(200);
+  };
+
 
 
 
@@ -81,13 +82,14 @@ function UserRoutes(app) {
   app.delete("/api/users/:userId", deleteUser);
   
   app.post("/api/users/signin", signin);
-  app.post("/api/users/signout", signout);
+  // app.post("/api/users/signout", signout);
   // app.post("/api/users/account", account);
 
   app.post("/users/login", login);
   app.get("/users/all", findAllUsers);
   app.post("/users/signup", signup);
   app.get("/users/fetchAccount", account);
+  app.post("/users/signout", signout);
 
   // Credentials:
   // user101
