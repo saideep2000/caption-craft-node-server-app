@@ -72,6 +72,27 @@ function UserRoutes(app) {
     res.json(200);
   };
 
+  const suggestedUsers = async (req, res) => {
+
+    // currentUser = req.session['currentUser']
+    // console.log(currentUser)
+
+    const body = req.body;
+    const userId = body._id
+    if (userId === undefined || userId === null || !userId){
+      const message = "You are not sending valid userId"
+      res.status(400).json({message});
+    }
+    else{
+      const suggestPeople = await dao.suggestedUsers(userId);
+      // return with sugested people as json format
+      res.json(suggestPeople);
+    }
+
+    // currentUser = req.session['currentUser']
+    // const suggestPeople = await dao.suggestedUsers();
+    // res.json(suggestPeople);
+  };
 
 
 
@@ -90,6 +111,7 @@ function UserRoutes(app) {
   app.post("/users/signup", signup);
   app.get("/users/fetchAccount", account);
   app.post("/users/signout", signout);
+  app.post("/users/suggestedUsers", suggestedUsers);
 
   // Credentials:
   // user101
