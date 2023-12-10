@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
     firstName: {
         type : String, default : "your firstname"
     },
-    firstName: {
+    lastName: {
         type : String, default : "your lastname"
     },
     email: {
