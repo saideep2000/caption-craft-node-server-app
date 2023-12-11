@@ -32,7 +32,7 @@ const sessionOptions = {
     };
   }
 app.use(session(sessionOptions));
-app.use(express.json());
+app.use(express.json({ limit: '50mb' }));
 
 
 LoginRoutes(app)

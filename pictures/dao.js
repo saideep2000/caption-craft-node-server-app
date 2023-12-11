@@ -75,7 +75,7 @@ export const findAllPictures = async () => {
 
 }
 
-export const findUserById = (pictureId) => model.findById(pictureId);
+export const findPostById = (pictureId) => model.findById(pictureId);
 
 // export const findUserByUsername = (username) =>
 //   model.findOne({ username: username });

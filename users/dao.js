@@ -1,5 +1,7 @@
 import model from "./model.js";
 import { v4 as uuidv4 } from 'uuid';
+import PictureModel from "././model.js"
+import {findPostById} from "../pictures/dao.js";
 
 export const createUser = (user) => {
     user._id = uuidv4();
@@ -9,6 +11,8 @@ export const createUser = (user) => {
 export const findAllUsers = () => model.find();
 
 export const findUserById = (userId) => model.findById(userId);
+
+export const findPosts = (userId) => model.findById(userId).populate('PostedPictures');
 
 export const findUserByUsername = (username) =>
   model.findOne({ username: username });

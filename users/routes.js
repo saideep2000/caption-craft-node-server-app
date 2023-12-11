@@ -35,7 +35,10 @@ function UserRoutes(app) {
   };
 
   const account = async (req, res) => {
-    res.json(req.session['currentUser']);
+    if (req.session['currentUser']){
+      const posts = await dao.findPosts(req.session['currentUser']._id)
+      res.json(posts);
+    }
   };
 
 
