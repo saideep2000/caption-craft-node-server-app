@@ -7,6 +7,7 @@ import session from "express-session";
 import LoginRoutes from './Login/routes.js';
 import SignupRoutes from './Signup/routes.js';
 import PictureRoutes from './pictures/routes.js';
+import MessageRoutes from './messages/routes.js';
 
 mongoose.connect("mongodb+srv://caption-craft:R7MOIUbb43y7TJkv@cluster-craft.conjprb.mongodb.net/caption-craft");
 
@@ -39,5 +40,6 @@ LoginRoutes(app)
 SignupRoutes(app)
 UserRoutes(app)
 PictureRoutes(app)
+MessageRoutes(app)
 
 app.listen(process.env.PORT || 4000);

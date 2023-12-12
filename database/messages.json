@@ -1,0 +1,182 @@
+[
+    {
+        "_id": "6211e0014f1f4b4321d0fa25",
+        "senderId": "62100a1e1b23ab123456a1a1",
+        "receiverId": "62100a1e1b23ab123456a1a2",
+        "timestamp": "2023-12-11T10:00:00Z",
+        "messageContent": "Are you going to the event this weekend?",
+        "isRead": false,
+        "attachments": []
+    },
+    {
+        "_id": "6211e0124f1f4b4321d0fa26",
+        "senderId": "62100a1e1b23ab123456a1a2",
+        "receiverId": "62100a1e1b23ab123456a1a1",
+        "timestamp": "2023-12-11T10:01:00Z",
+        "messageContent": "Yes, I'm really looking forward to it!",
+        "isRead": true,
+        "attachments": []
+    },
+    {
+        "_id": "6211e0234f1f4b4321d0fa27",
+        "senderId": "62100a1e1b23ab123456a1a3",
+        "receiverId": "62100a1e1b23ab123456a1a4",
+        "timestamp": "2023-12-11T10:02:00Z",
+        "messageContent": "How's the new project coming along?",
+        "isRead": false,
+        "attachments": []
+    },
+    {
+        "_id": "6211e0344f1f4b4321d0fa28",
+        "senderId": "62100a1e1b23ab123456a1a4",
+        "receiverId": "62100a1e1b23ab123456a1a3",
+        "timestamp": "2023-12-11T10:03:00Z",
+        "messageContent": "Making good progress, thanks for asking!",
+        "isRead": true,
+        "attachments": []
+    },
+    {
+        "_id": "6211e0454f1f4b4321d0fa29",
+        "senderId": "62100a1e1b23ab123456a1a1",
+        "receiverId": "62100a1e1b23ab123456a1a3",
+        "timestamp": "2023-12-11T10:04:00Z",
+        "messageContent": "Can you send me the report by this evening?",
+        "isRead": false,
+        "attachments": []
+    },
+    {
+        "_id": "6211e0564f1f4b4321d0fa2a",
+        "senderId": "62100a1e1b23ab123456a1a3",
+        "receiverId": "62100a1e1b23ab123456a1a1",
+        "timestamp": "2023-12-11T10:05:00Z",
+        "messageContent": "Sure, I'll get it to you before 6 PM.",
+        "isRead": true,
+        "attachments": []
+    },
+    {
+        "_id": "6211e0674f1f4b4321d0fa2b",
+        "senderId": "62100a1e1b23ab123456a1a2",
+        "receiverId": "62100a1e1b23ab123456a1a4",
+        "timestamp": "2023-12-11T10:06:00Z",
+        "messageContent": "Did you hear about the new cafe that opened?",
+        "isRead": false,
+        "attachments": []
+    },
+    {
+        "_id": "6211e0784f1f4b4321d0fa2c",
+        "senderId": "62100a1e1b23ab123456a1a4",
+        "receiverId": "62100a1e1b23ab123456a1a2",
+        "timestamp": "2023-12-11T10:07:00Z",
+        "messageContent": "Yeah, I'm planning to check it out this weekend.",
+        "isRead": true,
+        "attachments": []
+    },
+    {
+        "_id": "6211e0894f1f4b4321d0fa2d",
+        "senderId": "62100a1e1b23ab123456a1a1",
+        "receiverId": "62100a1e1b23ab123456a1a4",
+        "timestamp": "2023-12-11T10:08:00Z",
+        "messageContent": "Can you help me with the presentation tomorrow?",
+        "isRead": false,
+        "attachments": []
+    },
+    {
+        "_id": "6211e09a4f1f4b4321d0fa2e",
+        "senderId": "62100a1e1b23ab123456a1a4",
+        "receiverId": "62100a1e1b23ab123456a1a1",
+        "timestamp": "2023-12-11T10:09:00Z",
+        "messageContent": "Of course, let's meet in the afternoon to discuss.",
+        "isRead": true,
+        "attachments": []
+    },
+    {
+        "_id": "6211e0ab4f1f4b4321d0fa2f",
+        "senderId": "62100a1e1b23ab123456a1a2",
+        "receiverId": "62100a1e1b23ab123456a1a3",
+        "timestamp": "2023-12-11T10:10:00Z",
+        "messageContent": "Need any help with the project?",
+        "isRead": false,
+        "attachments": []
+    },
+    {
+        "_id": "6211e0bc4f1f4b4321d0fa30",
+        "senderId": "62100a1e1b23ab123456a1a3",
+        "receiverId": "62100a1e1b23ab123456a1a2",
+        "timestamp": "2023-12-11T10:11:00Z",
+        "messageContent": "Thanks, but I think I've got it covered!",
+        "isRead": true,
+        "attachments": []
+    },
+    {
+        "_id": "6211e0cd4f1f4b4321d0fa31",
+        "senderId": "62100a1e1b23ab123456a1a4",
+        "receiverId": "62100a1e1b23ab123456a1a1",
+        "timestamp": "2023-12-11T10:12:00Z",
+        "messageContent": "Are we still on for the meeting next Monday?",
+        "isRead": false,
+        "attachments": []
+    },
+    {
+        "_id": "6211e0de4f1f4b4321d0fa32",
+        "senderId": "62100a1e1b23ab123456a1a1",
+        "receiverId": "62100a1e1b23ab123456a1a4",
+        "timestamp": "2023-12-11T10:13:00Z",
+        "messageContent": "Yes, let's finalize the agenda by this Friday.",
+        "isRead": true,
+        "attachments": []
+    },
+    {
+        "_id": "6211e0ef4f1f4b4321d0fa33",
+        "senderId": "62100a1e1b23ab123456a1a3",
+        "receiverId": "62100a1e1b23ab123456a1a1",
+        "timestamp": "2023-12-11T10:14:00Z",
+        "messageContent": "Can you review my part of the project?",
+        "isRead": false,
+        "attachments": []
+    },
+    {
+        "_id": "6211e1004f1f4b4321d0fa34",
+        "senderId": "62100a1e1b23ab123456a1a1",
+        "receiverId": "62100a1e1b23ab123456a1a3",
+        "timestamp": "2023-12-11T10:15:00Z",
+        "messageContent": "Sure, I'll take a look this afternoon.",
+        "isRead": true,
+        "attachments": []
+    },
+    {
+        "_id": "6211e1114f1f4b4321d0fa35",
+        "senderId": "62100a1e1b23ab123456a1a2",
+        "receiverId": "62100a1e1b23ab123456a1a4",
+        "timestamp": "2023-12-11T10:16:00Z",
+        "messageContent": "What time is our workout session tomorrow?",
+        "isRead": false,
+        "attachments": []
+    },
+    {
+        "_id": "6211e1224f1f4b4321d0fa36",
+        "senderId": "62100a1e1b23ab123456a1a4",
+        "receiverId": "62100a1e1b23ab123456a1a2",
+        "timestamp": "2023-12-11T10:17:00Z",
+        "messageContent": "Let's meet at the gym at 7 AM.",
+        "isRead": true,
+        "attachments": []
+    },
+    {
+        "_id": "6211e1334f1f4b4321d0fa37",
+        "senderId": "62100a1e1b23ab123456a1a3",
+        "receiverId": "62100a1e1b23ab123456a1a1",
+        "timestamp": "2023-12-11T10:18:00Z",
+        "messageContent": "I have some ideas for the team outing. Want to discuss?",
+        "isRead": false,
+        "attachments": []
+    },
+    {
+        "_id": "6211e1444f1f4b4321d0fa38",
+        "senderId": "62100a1e1b23ab123456a1a1",
+        "receiverId": "62100a1e1b23ab123456a1a3",
+        "timestamp": "2023-12-11T10:19:00Z",
+        "messageContent": "Absolutely, let's chat over coffee tomorrow.",
+        "isRead": true,
+        "attachments": []
+    }
+]
