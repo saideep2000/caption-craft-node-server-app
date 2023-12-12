@@ -98,6 +98,44 @@ function UserRoutes(app) {
   };
 
 
+  const followedUsers = async (req, res) => {
+
+    const body = req.body;
+    const userId = body._id
+    if (userId === undefined || userId === null || !userId){
+      const message = "You are not sending valid userId"
+      res.status(400).json({message});
+    }
+    else{
+      const followedPeople = await dao.followedUsers(userId);
+      // return with sugested people as json format
+      res.json(followedPeople);
+    }
+  };
+
+  const followUser = async (req, res) => {
+
+    // currentUser = req.session['currentUser']
+    // console.log(currentUser)
+
+    const body = req.body;
+    const userId = body._id
+    const frndId = body.frndId
+    if (userId === undefined || userId === null || !userId){
+      const message = "You are not sending valid userId"
+      res.status(400).json({message});
+    }
+    else{
+      const followingPeople = await dao.followUser(userId, frndId);
+      // return with sugested people as json format
+      res.json(followingPeople);
+    }
+
+    // currentUser = req.session['currentUser']
+    // const suggestPeople = await dao.suggestedUsers();
+    // res.json(suggestPeople);
+  };
+
 
   // app.post("/api/users", createUser);
   // app.get("/api/users", findAllUsers);
@@ -115,6 +153,8 @@ function UserRoutes(app) {
   app.get("/users/fetchAccount", account);
   app.post("/users/signout", signout);
   app.post("/users/suggestedUsers", suggestedUsers);
+  app.post("/users/followedUsers", followedUsers);
+  app.post("/users/followUser", followUser);
 
   // Credentials:
   // user101

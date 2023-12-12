@@ -57,3 +57,80 @@ export const suggestedUsers = async (userId) => {
       throw error; // or handle the error as needed
   }
 }
+
+export const followedUsers = async (userId) => {
+  try {
+      // Find the current user
+      const user = await model.findById(userId).lean();
+
+      if (!user) {
+          throw new Error('User not found');
+      }
+
+      // Retrieve the list of user IDs that the current user is following
+      const userFollowingIds = user.following.map(followingId => followingId.toString());
+
+      // Fetch the details of each followed user
+      const followedPeople = await Promise.all(
+        userFollowingIds.map(async (id) => {
+          const followedUser = await model.findById(id).lean();
+          return {
+            ...followedUser,
+            name: `${followedUser.firstname} ${followedUser.lastname}` // Constructing the full name
+          };
+        })
+      );
+
+      return followedPeople;
+  } catch (error) {
+      console.error("Error in followedUsers:", error);
+      throw error; // or handle the error as needed
+  }
+}
+
+
+
+export const followUser = async (userId, frndId) => {
+  try {
+    // Assuming 'model' is your user model, similar to Mongoose models in MongoDB
+    const user = await model.findById(userId);
+
+    if (!user) {
+        throw new Error('User not found');
+    }
+
+    // Check if the user is already following the friend
+    const isAlreadyFollowing = user.following.some(id => id.toString() === frndId);
+    
+    if (isAlreadyFollowing) {
+      throw new Error('User is already following this friend');
+    }
+
+    // Add frndId to the user's following list
+    user.following.push(frndId);
+
+    // Save the updated user
+    await user.save();
+
+    // Fetch the updated list of followed users
+    const updatedFollowingList = await Promise.all(
+      user.following.map(async (id) => {
+        const followedUser = await model.findById(id).lean();
+        return {
+          ...followedUser,
+          name: `${followedUser.firstname} ${followedUser.lastname}`
+        };
+      })
+    );
+
+    return updatedFollowingList;
+  } catch (error) {
+      console.error("Error in following the User:", error);
+      throw error;
+  }
+}
+
+
+
+
+
