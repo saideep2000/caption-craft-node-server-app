@@ -4,7 +4,7 @@
 
 ## Steps did in this project :
 
-### Installed things :
+### Installed things in the project:
 
 npm init
 
@@ -21,6 +21,13 @@ npm  install  cors
 npm  install  dotenv
 
 npm install mongoose
+
+npm  install  express-session
+
+npm install uuid
+
+npm install socket.io
+
 
 
 ## Project Struture is :

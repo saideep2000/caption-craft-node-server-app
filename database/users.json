@@ -1,0 +1,58 @@
+[
+    {
+        "_id": "62100a1e1b23ab123456a1a1",
+        "username": "user101",
+        "password": "hashed_password1",
+        "firstname": "Alex",
+        "lastname": "Brown",
+        "email": "alex.brown@example.com",
+        "dob": "1985-01-10",
+        "profilePicture": "https://i.pinimg.com/564x/34/c4/c0/34c4c069e5b18411de9403ca6dfed666.jpg",
+        "followers": ["62100a1e1b23ab123456a1a2", "62100a1e1b23ab123456a1a3"],
+        "following": ["62100a1e1b23ab123456a1a4", "62100a1e1b23ab123456a1a2"],
+        "PostedPictures": ["62100b2e1b23ab123456b1b1", "62100b2e1b23ab123456b1b2"]
+    },
+
+    {
+        "_id": "62100a1e1b23ab123456a1a2",
+        "username": "user102",
+        "password": "hashed_password2",
+        "firstname": "Beth",
+        "lastname": "Johnson",
+        "email": "beth.johnson@example.com",
+        "dob": "1990-04-20",
+        "profilePicture": "https://images.squarespace-cdn.com/content/v1/5528a968e4b02ed06b8e918e/1504147775595-H87UR3VYXQTU8XQ4W0KU/denver-senior-pictures-merritt.jpg",
+        "followers": ["62100a1e1b23ab123456a1a1", "62100a1e1b23ab123456a1a3"],
+        "following": ["62100a1e1b23ab123456a1a1", "62100a1e1b23ab123456a1a4"],
+        "PostedPictures": ["62100b2e1b23ab123456b1b3", "62100b2e1b23ab123456b1b4"]
+    },
+
+    {
+        "_id": "62100a1e1b23ab123456a1a3",
+        "username": "user103",
+        "password": "hashed_password3",
+        "firstname": "Charlie",
+        "lastname": "Davis",
+        "email": "charlie.davis@example.com",
+        "dob": "1988-07-15",
+        "profilePicture": "https://clicklovegrow.com/wp-content/uploads/2021/03/img-5623-731x1024.jpg",
+        "followers": ["62100a1e1b23ab123456a1a1", "62100a1e1b23ab123456a1a2"],
+        "following": ["62100a1e1b23ab123456a1a4", "62100a1e1b23ab123456a1a1"],
+        "PostedPictures": ["62100b2e1b23ab123456b1b5", "62100b2e1b23ab123456b1b6"]
+    },
+
+    {
+        "_id": "62100a1e1b23ab123456a1a4",
+        "username": "user104",
+        "password": "hashed_password4",
+        "firstname": "Diana",
+        "lastname": "Evans",
+        "email": "diana.evans@example.com",
+        "dob": "1992-11-30",
+        "profilePicture": "https://images.unsplash.com/photo-1646158018829-c63330d771b6?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTF8fHxlbnwwfHx8fHw%3D",
+        "followers": ["62100a1e1b23ab123456a1a3", "62100a1e1b23ab123456a1a2"],
+        "following": ["62100a1e1b23ab123456a1a1", "62100a1e1b23ab123456a1a3"],
+        "PostedPictures": ["62100b2e1b23ab123456b1b7", "62100b2e1b23ab123456b1b8"]
+    }
+    
+]
