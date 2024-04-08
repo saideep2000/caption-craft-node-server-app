@@ -8,15 +8,19 @@ import LoginRoutes from './Login/routes.js';
 import SignupRoutes from './Signup/routes.js';
 import PictureRoutes from './pictures/routes.js';
 import MessageRoutes from './messages/routes.js';
+import AudioCallingRoutes from './calling/audiocalling/routes.js';
+import VideoCallingRoutes from './calling/videocalling/routes.js';
+import {createServer} from 'http';
 
 mongoose.connect("mongodb+srv://caption-craft:R7MOIUbb43y7TJkv@cluster-craft.conjprb.mongodb.net/caption-craft");
 
 const app = express()
+const httpServer = createServer(app)
 app.use(
     cors({
     credentials: true,
-    // origin: "http://localhost:3000",
-    origin: process.env.FRONTEND_URL,
+    origin: "http://localhost:3000",
+    // origin: process.env.FRONTEND_URL,
   })
  );
 
@@ -41,5 +45,7 @@ SignupRoutes(app)
 UserRoutes(app)
 PictureRoutes(app)
 MessageRoutes(app)
+AudioCallingRoutes(app)
+VideoCallingRoutes(app)
 
-app.listen(process.env.PORT || 4000);
+httpServer.listen(process.env.PORT || 4000);

@@ -26,6 +26,8 @@ npm  install  express-session
 
 npm install uuid
 
+npm install socket.io
+
 
 
 ## Project Struture is :
